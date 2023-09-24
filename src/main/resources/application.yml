@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: HOSPITAL-MANAGEMENT-SYSTEM
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/hms
+    username: root
+    password: mysql
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+# Logging configuration
+logging:
+  file:
+    name: logfile.log  # Specify the log file location
+    max-size: 10MB                     # Maximum size of the log file before it's rolled over (e.g., 10MB)
+    max-history: 7                     # Maximum number of backup log files to keep
+  level:
+    root: INFO                         # Set the root logging level (INFO, WARN, ERROR, etc.)
+    org.springframework: INFO           # Set the logging level for the Spring framework classes
+    #com.Hospital_Management_System: DEBUG           # Set the logging level for your application's package(s)
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"  # Define log message format for console
