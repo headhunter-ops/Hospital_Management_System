@@ -9,8 +9,8 @@ Key Features:
 - Medical Records: Maintain detailed medical records, including diagnoses, prescriptions, and test results.
 - Doctor Information: Store and access information about medical professionals and their specializations.
 
-Feel free to explore our codebase, contribute to its development, and use it to enhance hospital management processes. We welcome collaboration from the healthcare and software development communities to make healthcare more accessible and efficient.
+Feel free to explore my codebase, contribute to its development, and use it to enhance hospital management processes. I welcome collaboration from the healthcare and software development communities to make healthcare more accessible and efficient.
 
-Get started by cloning the repository and following the setup instructions in the README.
+Get started by cloning the repository.
 
 Happy coding and improving healthcare with HOSPITAL-MANAGEMENT-SYSTEM!
