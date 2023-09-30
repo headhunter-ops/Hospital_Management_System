@@ -64,31 +64,32 @@
 
 	<build>
     <plugins>
-       <!-- To define the plugin version in your parent POM -->
-    <pluginManagement>
-      <plugins>
+        <!-- Define the Maven WAR Plugin version in pluginManagement -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.4.1-SNAPSHOT</version>
+                </plugin>
+                <!-- Other plugins can be defined here as well -->
+            </plugins>
+        </pluginManagement>
+
+        <!-- Use the Maven WAR Plugin in your POM -->
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.4.1-SNAPSHOT</version>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
         </plugin>
-        ...
-      </plugins>
-    </pluginManagement>
-	     <!-- To use the plugin goals in your POM or parent POM -->
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-      </plugin>
-      ...
-    </plugins>
+        
+        <!-- Define the Spring Boot Maven Plugin -->
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
     </plugins>
 </build>
+
 
 
 </project>
