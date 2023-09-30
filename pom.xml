@@ -64,18 +64,25 @@
 
 	<build>
     <plugins>
+       <!-- To define the plugin version in your parent POM -->
+    <pluginManagement>
+      <plugins>
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.2</version> <!-- Specify the version you want to use -->
-            <configuration>
-                <!-- Exclude the lombok library from being included in the WAR -->
-                <packagingExcludes>WEB-INF/lib/lombok-*.jar</packagingExcludes>
-                
-                <!-- Set failOnMissingWebXml to false -->
-                <failOnMissingWebXml>false</failOnMissingWebXml>
-            </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.4.1-SNAPSHOT</version>
         </plugin>
+        ...
+      </plugins>
+    </pluginManagement>
+	     <!-- To use the plugin goals in your POM or parent POM -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+      </plugin>
+      ...
+    </plugins>
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
