@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.Hospital_Management_System</groupId>
 	<artifactId>Hospital_Management_System</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Hospital_Management_System</name>
 	<description>Hospital_Management_Systemt</description>
