@@ -71,22 +71,18 @@
 
 	<build>
     <plugins>
-        <!-- Define the Maven WAR Plugin version in pluginManagement -->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.4.1-SNAPSHOT</version>
-                </plugin>
-                <!-- Other plugins can be defined here as well -->
-            </plugins>
-        </pluginManagement>
-
-        <!-- Use the Maven WAR Plugin in your POM -->
+        <!-- Define the Maven WAR Plugin -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.1-SNAPSHOT</version> <!-- Specify the version you want to use -->
+            <configuration>
+                <!-- Exclude the lombok library from being included in the WAR -->
+                <packagingExcludes>WEB-INF/lib/lombok-*.jar</packagingExcludes>
+                
+                <!-- Set failOnMissingWebXml to false -->
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
         </plugin>
         
         <!-- Define the Spring Boot Maven Plugin -->
@@ -96,6 +92,7 @@
         </plugin>
     </plugins>
 </build>
+
 
 
 
